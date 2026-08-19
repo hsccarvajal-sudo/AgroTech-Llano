@@ -4,14 +4,14 @@ public abstract class Sensor {
     private String ubicacion;
     private boolean activo;
 
-    // Constructor
+    
     public Sensor(String id, String ubicacion) {
         this.id = id;
         this.ubicacion = ubicacion;
         this.activo = true;
     }
 
-    // Getters (sin setters para id y ubicacion → inmutables)
+    // Getters sin setters es inmutables
     public String getId() {
         return id;
     }
@@ -24,12 +24,12 @@ public abstract class Sensor {
         return activo;
     }
 
-    // Setter solo para activo
+    // Setter para activo
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
 
-    // Métodos abstractos (los implementan las subclases)
+    // Métodos abstractos
     public abstract double tomarLectura();
     public abstract String evaluarEstado();
     public abstract boolean isCritico();
